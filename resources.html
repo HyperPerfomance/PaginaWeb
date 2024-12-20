@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyper Performance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Fondo con Motion Blur -->
+    <div class="blur-bg">
+        <div class="blur-circle circle-1"></div>
+        <div class="blur-circle circle-2"></div>
+        <div class="blur-circle circle-3"></div>
+    </div>
+
+    <header>
+        <i class="fas fa-tachometer-alt main-icon">        <h4>Hyper 
+            Performance</h4></i>
+
+
+        <div class="navigation">
+            <div class="container">
+                <div class="nav-icons">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        Inicio
+                    </a>
+                    <a href="#buy">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </a>
+                    <a href="resources.html">
+                        <i class="fas fa-book-open"></i>
+                        Recursos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+
+
+    <div class="container">
+        <section class="features">
+            <div class="feature">
+                <div class="hero-content">
+                    <i class="icon-performance"></i>
+                    <h3>[Gratis] TimerTool</h3>
+                    <p>Una herramienta que realiza un análisis de rendimiento (benchmark) y establece automáticamente como servicio de inicio el Timer Resolution, optimizando así la precisión y la eficiencia de los tiempos de ejecución en tu sistema.</p>
+                    <a href="#" class="oth-button">Github Docs</a>
+                </div>
+                <div class="hero-content">
+                    <i class="icon-security"></i>
+                    <h3>[Gratis] Driver Searcher Nvidia!</h3>
+                    <p>¡Descubre los drivers personalizados de Nvidia! Optimiza el rendimiento de tu hardware con configuraciones a medida y conoce el driver perfecto para tu sistema. Lleva tu experiencia gráfica al siguiente nivel y maximiza el potencial de tu GPU.</p>
+                    <a href="#" class="oth-button">Github Docs</a>
+                </div>
+                <div class="hero-content">
+                    <i class="icon-latency"></i>
+                    <h3>[Gratis] DevManView Gui</h3>
+                    <p>Lista de tus dispositivos en el administrador de dispositivos, con la opción de activarlos o desactivarlos según lo necesites.</p>
+                    <a href="#" class="oth-button">Github Docs</a>
+                </div>
+                <div class="hero-content">
+                    <i class="icon-latency"></i>
+                    <h3>Más Ajustes</h3>
+                    <p>¡Estamos actualizando los ajustes y mejorando el proyecto constantemente! Con nuestra versión Plus, podrás acceder a las últimas configuraciones y herramientas antes que nadie, llevando tu experiencia a nuevas alturas.</p>
+                    <a href="#" class="oth-button">Comprar</a>
+                </div>
+            </div>
+        </section>
+    
+        <section class="cta">
+            <div class="hero-content">
+                <h1>¿Tienes alguna duda?</h1>
+                <p>Puedes entrar a nuestro Discord para resolver todas tus preguntas.</p>
+                <a href="#" class="cta-button">Discord</a>
+            </div>
+        </section>
+    
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hyper Performance. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animación al hacer scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature').forEach(feature => {
+            observer.observe(feature);
+        });
+
+        // Interactividad básica
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu interés en Hyper Performance! Próximamente más información.');
+        });
+    </script>
+</body>
+</html>
